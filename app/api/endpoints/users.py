@@ -15,7 +15,7 @@ router = APIRouter()
 async def read_current_user(
     current_user: User = Depends(deps.get_current_user),
 ):
-    """Get current user"""
+    """Get current user, yahoo! Yeah man, Fast api is so cool baby"""
     return current_user
 
 

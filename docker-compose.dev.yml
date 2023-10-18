@@ -20,12 +20,13 @@ services:
   web:
     depends_on:
       - postgres
-    restart: "unless-stopped"
     build:
       context: ./
       dockerfile: Dockerfile
     env_file:
       - .env
+    volumes:
+      - ./:/build
     environment:
       - DEFAULT_DATABASE_HOSTNAME=postgres
       - DEFAULT_DATABASE_PORT=5432
