@@ -57,11 +57,11 @@ class Settings(BaseSettings):
     DEFAULT_DATABASE_DB: str
 
     # POSTGRESQL TEST DATABASE
-    TEST_DATABASE_HOSTNAME: str = "postgres"
-    TEST_DATABASE_USER: str = "postgres"
-    TEST_DATABASE_PASSWORD: str = "postgres"
-    TEST_DATABASE_PORT: int = 5432
-    TEST_DATABASE_DB: str = "postgres"
+    TEST_DATABASE_HOSTNAME: str
+    TEST_DATABASE_USER: str
+    TEST_DATABASE_PASSWORD: str
+    TEST_DATABASE_PORT: int
+    TEST_DATABASE_DB: str
 
     # FIRST SUPERUSER
     FIRST_SUPERUSER_EMAIL: EmailStr

@@ -17,6 +17,20 @@ services:
       - POSTGRES_DB=${DEFAULT_DATABASE_DB}
       - POSTGRES_USER=${DEFAULT_DATABASE_USER}
       - POSTGRES_PASSWORD=${DEFAULT_DATABASE_PASSWORD}
+  
+  test_database:
+    restart: unless-stopped
+    image: postgres:latest
+    volumes:
+      - test_database_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${TEST_DATABASE_DB}
+      - POSTGRES_USER=${TEST_DATABASE_USER}
+      - POSTGRES_PASSWORD=${TEST_DATABASE_PASSWORD}
+    env_file:
+      - .env
+    ports:
+      - "${TEST_DATABASE_PORT}:5432"
   web:
     depends_on:
       - postgres
@@ -30,8 +44,13 @@ services:
     environment:
       - DEFAULT_DATABASE_HOSTNAME=postgres
       - DEFAULT_DATABASE_PORT=5432
+      - TEST_DATABASE_HOSTNAME=test_database
+      - TEST_DATABASE_PORT=5432
     ports:
       - 8888:8000
 
+
+
 volumes:
+  test_database_data:
   postgres_data:
