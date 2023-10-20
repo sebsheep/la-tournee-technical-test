@@ -13,24 +13,90 @@ alembic revision --autogenerate -m "migration_name"
 # apply all migrations
 alembic upgrade head
 """
-import uuid
+import json
+from typing import List, Optional
+import enum
+from pydantic import BaseModel, ConfigDict, RootModel, TypeAdapter
 
-from sqlalchemy import String
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import String, Integer, Enum
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+import app.core.session
+
+
+class ProductSize(enum.Enum):
+    SMALL = "small"
+    BIG = "big"
+    HUGE = "huge"
+    TWO_IN_A_BIG = "two_in_a_big"
 
 
 class Base(DeclarativeBase):
     pass
 
 
-class User(Base):
-    __tablename__ = "user_model"
+class Product(Base):
+    __tablename__ = "product"
 
-    id: Mapped[str] = mapped_column(
-        UUID(as_uuid=False), primary_key=True, default=lambda _: str(uuid.uuid4())
-    )
-    email: Mapped[str] = mapped_column(
-        String(254), nullable=False, unique=True, index=True
-    )
-    hashed_password: Mapped[str] = mapped_column(String(128), nullable=False)
+    sku: Mapped[str] = mapped_column(String(255), primary_key=True)
+    brand: Mapped[str] = mapped_column(String(255), nullable=False)
+    # when  packing is set to `NULL`, we can not use supplier crates
+    packing: Mapped[Optional[int]] = mapped_column(Integer())
+    size: Mapped[ProductSize] = mapped_column(Enum(ProductSize), nullable=False)
+
+
+class ProductFromJsonItem(BaseModel):
+    """Schema to import the json given in the gist"""
+
+    model_config = ConfigDict(extra="forbid", strict=True)
+
+    sku: str
+    brand: str
+    packing: int
+    deposit: float
+    preparation_in_crate: bool
+
+    def consolidated_packing(self) -> Optional[int]:
+        if self.brand in ("La Tournée", "Orangina"):
+            return None
+        if not self.preparation_in_crate:
+            return None
+        return self.packing
+
+    def size(self) -> ProductSize:
+        # special case for orangina: we cannot fit 1 bottle in a small slot
+        # but 2
+        if self.sku == "orangina-25":
+            return ProductSize.TWO_IN_A_BIG
+        # special case for La Tournée: all the products are "HUGE"
+        if self.brand == "La Tournée":
+            return ProductSize.HUGE
+
+        # we take into account 0.2 misrepresentation in base 2
+        # BTW, using float for price is kinda dangerous!
+        if 0.19 < self.deposit < 0.21:
+            return ProductSize.SMALL
+
+        # same here for 0.4
+        if 0.39 < self.deposit < 0.41:
+            return ProductSize.BIG
+
+        raise ValueError(
+            f"The {self.sku} product has a deposit of {self.deposit} which doesn't fit into the predifined sizing"
+        )
+
+
+async def load_product_from_json():
+    with open("store.json", "r") as file:
+        raw_content = json.load(file)
+    parsed_content = TypeAdapter(List[ProductFromJsonItem]).validate_python(raw_content)
+    session = app.core.session.async_session()
+    for product in parsed_content:
+        session.add(
+            Product(
+                sku=product.sku,
+                brand=product.brand,
+                packing=product.consolidated_packing(),
+                size=product.size(),
+            )
+        )
+        await session.commit()

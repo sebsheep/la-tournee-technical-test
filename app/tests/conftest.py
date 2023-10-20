@@ -10,7 +10,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.core import config
 from app.core.session import async_engine, async_session
 from app.main import app
-from app.models import Base, User
+from app.models import Base
 
 
 @pytest.fixture(scope="session")

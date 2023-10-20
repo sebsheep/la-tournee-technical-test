@@ -7,6 +7,8 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from app.api.api import api_router
 from app.core import config
 
+import app.models as models
+
 app = FastAPI(
     title=config.settings.PROJECT_NAME,
     version=config.settings.VERSION,
@@ -15,6 +17,12 @@ app = FastAPI(
     docs_url="/",
 )
 app.include_router(api_router)
+
+
+@app.on_event("startup")
+async def startup_event():
+    await models.load_product_from_json()
+
 
 # Sets all CORS enabled origins
 app.add_middleware(

@@ -1,0 +1,821 @@
+[
+    {
+      "sku": "antigaspi-la-tournee-yaourt-nature-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-sucre-roux-cassonade-800",
+      "brand": "La Tournée",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "reo-gaslonde-beurre-baratte-doux-250",
+      "brand": "Le Gaslonde",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-pistaches-grillees-salees-200",
+      "brand": "La Tournée",
+      "packing": 50,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-penne-ble-semi-complet-bio-350",
+      "brand": "La Tournée",
+      "packing": 14,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-serpentini-345",
+      "brand": "La Tournée",
+      "packing": 14,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-lentilles-vertes-850",
+      "brand": "La Tournée",
+      "packing": 5,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-riz-long-blanc-camargue-bio-800",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "antigaspi-millessaveurs-oeufs-bio-6",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-melange-firemix-165",
+      "brand": "La Tournée",
+      "packing": 39,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-fritures-chocolat-marbre-550",
+      "brand": "La Tournée",
+      "packing": 1,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-sables-tomate-herbes-provence-125",
+      "brand": "La Tournée",
+      "packing": 16,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "antigaspi-la-tournee-creme-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-boulgour-bio-670",
+      "brand": "La Tournée",
+      "packing": 7,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-cajou-grillees-salees-225",
+      "brand": "La Tournée",
+      "packing": 22,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-tomates-bio",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-abricots-secs-250",
+      "brand": "La Tournée",
+      "packing": 20,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-potimarron-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-fromage-blanc-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-chou-rouge-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-oeuf-chocolat-lait-600",
+      "brand": "La Tournée",
+      "packing": 1,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "coca-cola-zero-33",
+      "brand": "Coca-Cola",
+      "packing": 24,
+      "deposit": 0.2,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-butternut-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-corn-flakes-200",
+      "brand": "La Tournée",
+      "packing": 45,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-roquette-bio-100",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-cafe-grains-espresso-370",
+      "brand": "La Tournée",
+      "packing": 13,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-betteraves-rouges-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-oeufs-bio-6",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-pates-alphabet-260",
+      "brand": "La Tournée",
+      "packing": 19,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-gros-sel-800",
+      "brand": "La Tournée",
+      "packing": 25,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-lait-entier-100",
+      "brand": "La Tournée",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-choux-de-bruxelles-bio-500",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-yaourt-nature-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-oeuf-chocolat-noir-645",
+      "brand": "La Tournée",
+      "packing": 1,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-chou-frise-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-echalotes-bio-300",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-chou-kale-bio-700",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "reo-gaslonde-beurre-baratte-demi-sel-250",
+      "brand": "Le Gaslonde",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "pack-premiere-commande-bouchon-korki",
+      "brand": "La Tournée",
+      "packing": 0,
+      "deposit": 0,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-panier-grand-6kg",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-cereales-choco-noisettes-235",
+      "brand": "La Tournée",
+      "packing": 42,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "coca-cola-33",
+      "brand": "Coca-Cola",
+      "packing": 24,
+      "deposit": 0.2,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-muesli-croustillant-chocolat-430",
+      "brand": "La Tournée",
+      "packing": 34,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "antigaspi-la-tournee-lait-demi-ecreme-100",
+      "brand": "La Tournée",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-sables-parmesan-110",
+      "brand": "La Tournée",
+      "packing": 36,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-sables-comte-110",
+      "brand": "La Tournée",
+      "packing": 36,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-petits-flocons-avoine-bio-430",
+      "brand": "La Tournée",
+      "packing": 23,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-riz-thai-parfume-800",
+      "brand": "La Tournée",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-cafe-grains-honduras-bio-370",
+      "brand": "La Tournée",
+      "packing": 8,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-farine-ble-t65-bio-630",
+      "brand": "La Tournée",
+      "packing": 39,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-chou-blanc-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-pois-chiches-345",
+      "brand": "La Tournée",
+      "packing": 14,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-panier-petit-4kg",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "pajo-jus-pomme-gingembre-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "antigaspi-la-tournee-fromage-blanc-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-amandes-bio-225",
+      "brand": "La Tournée",
+      "packing": 44,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "pajo-lait-avoine-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-oignons-rouges-bio-500",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-courgette-bio-100",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-epinards-bio-300",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "pajo-jus-multifruits-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-concombre-bio",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "pajo-jus-pomme-poire-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "pajo-jus-fleurs-sureau-bio-100",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "pajo-lait-amande-avoine-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-langues-citriques-540",
+      "brand": "La Tournée",
+      "packing": 3,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-choufleur-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-penne-rigate-350",
+      "brand": "La Tournée",
+      "packing": 14,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-noix-cajou-crues-bio-225",
+      "brand": "La Tournée",
+      "packing": 100,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "pajo-jus-raisin-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-navets-violets-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "antigaspi-reo-gaslonde-beurre-baratte-doux-250",
+      "brand": "Le Gaslonde",
+      "packing": 12,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-muesli-croustillant-nature-bio-400",
+      "brand": "La Tournée",
+      "packing": 7,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-pommes-de-terre-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "orangina-25",
+      "brand": "Orangina",
+      "packing": 39,
+      "deposit": 0.2,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "coca-cola-cherry-33",
+      "brand": "Coca-Cola",
+      "packing": 24,
+      "deposit": 0.2,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-riz-basmati-800",
+      "brand": "La Tournée",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "pajo-jus-orange-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-celeri-rave-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-riz-long-complet-camargue-bio-800",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-quinoa-800",
+      "brand": "La Tournée",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-lentilles-corail-850",
+      "brand": "La Tournée",
+      "packing": 5,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "coca-cola-100",
+      "brand": "Coca-Cola",
+      "packing": 12,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-navets-jaunes-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-ourson-chocolat-noir-340",
+      "brand": "La Tournée",
+      "packing": 7,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "millessaveurs-carottes-bio-1000",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-sucre-blanc-cristal-870",
+      "brand": "La Tournée",
+      "packing": 22,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "pajo-jus-canneberge-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "pajo-jus-pomme-bio-100",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "antigaspi-la-tournee-yaourt-framboise-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-couscous-complet-bio-700",
+      "brand": "La Tournée",
+      "packing": 7,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-torsades-350",
+      "brand": "La Tournée",
+      "packing": 14,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-pepites-chocolat-noir-300",
+      "brand": "La Tournée",
+      "packing": 40,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-noisettes-225",
+      "brand": "La Tournée",
+      "packing": 22,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-yaourt-vanille-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-lait-demi-ecreme-100",
+      "brand": "La Tournée",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-creme-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-farine-ble-t65-630",
+      "brand": "La Tournée",
+      "packing": 39,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-poireaux-bio-700",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "antigaspi-la-tournee-lait-entier-100",
+      "brand": "La Tournée",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-melange-fruits-secs-230",
+      "brand": "La Tournée",
+      "packing": 43,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-yaourt-framboise-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "pajo-jus-tomate-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-petales-ble-chocolat-180",
+      "brand": "La Tournée",
+      "packing": 50,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-croquants-pepites-chocolat-260",
+      "brand": "La Tournée",
+      "packing": 15,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "pajo-jus-pomme-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "millessaveurs-oeufs-bio-10",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "pajo-jus-pamplemousse-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "pajo-jus-pomme-ananas-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "antigaspi-reo-gaslonde-beurre-baratte-demi-sel-250",
+      "brand": "Le Gaslonde",
+      "packing": 12,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-bretzel-epeautre-bio-200",
+      "brand": "La Tournée",
+      "packing": 20,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "pajo-jus-pomme-peche-abricot-bio-75",
+      "brand": "Pajottenlander",
+      "packing": 6,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "la-tournee-assortiment-happy-life-600",
+      "brand": "La Tournée",
+      "packing": 3,
+      "deposit": 0.4,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "antigaspi-la-tournee-yaourt-vanille-350",
+      "brand": "La Tournée",
+      "packing": 12,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-coquillettes-580",
+      "brand": "La Tournée",
+      "packing": 8,
+      "deposit": 0.4,
+      "preparation_in_crate": true
+    },
+    {
+      "sku": "antigaspi-millessaveurs-oeufs-bio-10",
+      "brand": "La Ferme des Mille Saveurs",
+      "packing": 1,
+      "deposit": 0,
+      "preparation_in_crate": false
+    },
+    {
+      "sku": "la-tournee-pruneaux-agen-300",
+      "brand": "La Tournée",
+      "packing": 16,
+      "deposit": 0.2,
+      "preparation_in_crate": false
+    }
+  ]
