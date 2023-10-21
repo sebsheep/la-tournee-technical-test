@@ -4,6 +4,11 @@ To run the app, just run:
 ```
 docker-compose -f docker-compose.yml up
 ```
+You can explore the API at http://localhost:8888/.
+(on the first build, the migration can be launched before 
+the SQL server is ready so you'd need to relaunch the 
+command if this happens -- yeah that's not ideal, sorry for
+that).
 
 It will spin up server, database and test database.
 
@@ -96,3 +101,4 @@ time is consequent and some features work randomly
 * Writing a separated docker architecture for production:
   the DB will probably be a managed one in AWS or so, thus
   we don't need this in the docker-compose.
+
