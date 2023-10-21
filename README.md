@@ -14,16 +14,16 @@ It will spin up server, database and test database.
 
 To run the tests, when the above server is running:
 ```
-docker exec -it la_tournee_web_1 pytest
+docker exec -it la-tournee-technical-test_web_1 pytest
 ```
-(you may have to rename `la_tournee_web_1` accordingly to the
-actual name of the `web` container).
+(you may have to rename `la-tournee-technical-test_web_1` accordingly to the
+actual name of the `web` container if you renamed the cloned repo).
 
 
 To format and sort imports:
 ```
-docker exec -it la_tournee_web_1 black .
-docker exec -it la_tournee_web_1 isort .
+docker exec -it la-tournee-technical-test_web_1 black .
+docker exec -it la-tournee-technical-test_web_1 isort .
 ```
 
 ## Interesting files
