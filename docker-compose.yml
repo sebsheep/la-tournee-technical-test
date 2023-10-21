@@ -1,26 +1,20 @@
 version: "3.7"
 
-# For local development, only database is running
-#
-# docker-compose up -d
-# uvicorn app.main:app --reload
-#
-
 services:
-  default_database:
+  postgres:
     restart: unless-stopped
     image: postgres:latest
     volumes:
-      - default_database_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
     environment:
       - POSTGRES_DB=${DEFAULT_DATABASE_DB}
       - POSTGRES_USER=${DEFAULT_DATABASE_USER}
       - POSTGRES_PASSWORD=${DEFAULT_DATABASE_PASSWORD}
-    env_file:
-      - .env
     ports:
-      - "${DEFAULT_DATABASE_PORT}:5432"
-
+      - 2345:5432
+  
   test_database:
     restart: unless-stopped
     image: postgres:latest
@@ -34,7 +28,26 @@ services:
       - .env
     ports:
       - "${TEST_DATABASE_PORT}:5432"
+  web:
+    depends_on:
+      - postgres
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    env_file:
+      - .env
+    volumes:
+      - ./:/build
+    environment:
+      - DEFAULT_DATABASE_HOSTNAME=postgres
+      - DEFAULT_DATABASE_PORT=5432
+      - TEST_DATABASE_HOSTNAME=test_database
+      - TEST_DATABASE_PORT=5432
+    ports:
+      - 8888:8000
+
+
 
 volumes:
   test_database_data:
-  default_database_data:
+  postgres_data:

@@ -4,10 +4,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 
+import app.models as models
 from app.api.api import api_router
 from app.core import config
-
-import app.models as models
 
 app = FastAPI(
     title=config.settings.PROJECT_NAME,

@@ -13,14 +13,15 @@ alembic revision --autogenerate -m "migration_name"
 # apply all migrations
 alembic upgrade head
 """
+import enum
 import json
 from typing import List, Optional
-import enum
-from pydantic import BaseModel, ConfigDict, RootModel, TypeAdapter
 
-from sqlalchemy import String, Integer, Enum, select
+from pydantic import BaseModel, ConfigDict, RootModel, TypeAdapter
+from sqlalchemy import Enum, Integer, String, select
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.sql.expression import func
+
 import app.core.session
 
 
@@ -85,7 +86,7 @@ class ProductFromJsonItem(BaseModel):
         # For safety, we decide those containers are big.
         if self.deposit == 0:
             return ProductSize.BIG
-                
+
         raise ValueError(
             f"The {self.sku} product has a deposit of {self.deposit} which doesn't fit into the predifined sizing"
         )
@@ -95,18 +96,21 @@ async def load_product_from_json():
     with open("store.json", "r") as file:
         raw_content = json.load(file)
     parsed_content = TypeAdapter(List[ProductFromJsonItem]).validate_python(raw_content)
-    
+
     session = app.core.session.async_session()
-    
+
     count_statement = select(func.count()).select_from(Product)
-    query =(await session.scalars(count_statement))
+    query = await session.scalars(count_statement)
     if query.one() > 0:
         print("The product table seems already filled in.")
         return
-    
+
     print("The product table is empty, trying to fill it in!")
-    
+
     for product in parsed_content:
+        # Note: if a sku is duplicated in the store, this will crash the app
+        # which seems fine given this function should only run once on the
+        # first startup
         session.add(
             Product(
                 sku=product.sku,
