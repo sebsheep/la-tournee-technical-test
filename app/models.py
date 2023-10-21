@@ -18,8 +18,9 @@ from typing import List, Optional
 import enum
 from pydantic import BaseModel, ConfigDict, RootModel, TypeAdapter
 
-from sqlalchemy import String, Integer, Enum
+from sqlalchemy import String, Integer, Enum, select
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from sqlalchemy.sql.expression import func
 import app.core.session
 
 
@@ -80,6 +81,11 @@ class ProductFromJsonItem(BaseModel):
         if 0.39 < self.deposit < 0.41:
             return ProductSize.BIG
 
+        # the json seem a bit buggy, they are a bunch of deposit at 0.
+        # For safety, we decide those containers are big.
+        if self.deposit == 0:
+            return ProductSize.BIG
+                
         raise ValueError(
             f"The {self.sku} product has a deposit of {self.deposit} which doesn't fit into the predifined sizing"
         )
@@ -89,7 +95,17 @@ async def load_product_from_json():
     with open("store.json", "r") as file:
         raw_content = json.load(file)
     parsed_content = TypeAdapter(List[ProductFromJsonItem]).validate_python(raw_content)
+    
     session = app.core.session.async_session()
+    
+    count_statement = select(func.count()).select_from(Product)
+    query =(await session.scalars(count_statement))
+    if query.one() > 0:
+        print("The product table seems already filled in.")
+        return
+    
+    print("The product table is empty, trying to fill it in!")
+    
     for product in parsed_content:
         session.add(
             Product(
@@ -99,4 +115,5 @@ async def load_product_from_json():
                 size=product.size(),
             )
         )
-        await session.commit()
+
+    await session.commit()
